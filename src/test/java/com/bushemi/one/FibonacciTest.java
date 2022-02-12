@@ -15,23 +15,24 @@ public class FibonacciTest {
         return new Object[][]{
                 new Object[]{0, 0},
                 new Object[]{1, 1},
-                new Object[]{2, 2},
-                new Object[]{3, 3},
-                new Object[]{4, 5},
-                new Object[]{5, 8},
-                new Object[]{6, 13},
-                new Object[]{7, 21}
+                new Object[]{2, 1},
+                new Object[]{3, 2},
+                new Object[]{4, 3},
+                new Object[]{5, 5},
+                new Object[]{6, 8},
+                new Object[]{7, 13},
+                new Object[]{8, 21},
+                new Object[]{9, 34}
         };
     }
 
     @Test(dataProvider = "numbersForFibonacci")
-    public void should_calculate_for_first_n_numbers(int n, int expectedFibo) {
+    public void should_calculate_n_numbers(int n, int expectedFibo) {
         //given
         //when
-        int fibo = service.calculateNumbers(n); //0,1,1,2,3,5,8
+        int fibo = service.calculateNthNumber(n); //0,1,1,2,3,5,8
 
         //then
         assertThat(fibo, is(equalTo(expectedFibo)));
-
     }
 }
