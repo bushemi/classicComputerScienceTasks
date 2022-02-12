@@ -35,4 +35,14 @@ public class FibonacciTest {
         //then
         assertThat(fibo, is(equalTo(expectedFibo)));
     }
+
+    @Test(dataProvider = "numbersForFibonacci")
+    public void should_calculate_n_numbers_advanced(int n, int expectedFibo) {
+        //given
+        //when
+        int fibo = service.calculateNthNumberAdvanced(n); //0,1,1,2,3,5,8
+
+        //then
+        assertThat(fibo, is(equalTo(expectedFibo)));
+    }
 }
