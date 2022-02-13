@@ -3,12 +3,15 @@ package com.bushemi.one;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class FibonacciTest {
-    Fibonacci service = new Fibonacci();
+    FibonacciService service = new FibonacciService();
 
     @DataProvider
     public Object[][] numbersForFibonacci() {
@@ -44,5 +47,28 @@ public class FibonacciTest {
 
         //then
         assertThat(fibo, is(equalTo(expectedFibo)));
+    }
+
+    @Test(dataProvider = "numbersForFibonacci")
+    public void should_calculate_n_numbers_with_for(int n, int expectedFibo) {
+        //given
+        //when
+        int fibo = service.calculateNthNumberWithFor(n); //0,1,1,2,3,5,8
+
+        //then
+        assertThat(fibo, is(equalTo(expectedFibo)));
+    }
+
+    @Test
+    public void should_return_first_fibonacci_numbers() {
+        //given
+        List<Integer> expectedSequences = List.of(0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+                55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181);
+
+        //when
+        List<Integer> actualSequence = service.generatorStream().limit(20).boxed().collect(Collectors.toList());
+
+        //then
+        assertThat(actualSequence, is(equalTo(expectedSequences)));
     }
 }
