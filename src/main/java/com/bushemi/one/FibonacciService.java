@@ -40,5 +40,17 @@ public class FibonacciService {
         });
     }
 
+    public int calculateNthNumberWithSingleRecursion(int n) {
+        return fib(0, 1, n);
+    }
+
+    private int fib(int prev, int current, int n) {
+        if (n == 0) {
+            return prev;
+        }
+        n--;
+        return fib(current, prev + current, n);
+    }
+
 
 }
