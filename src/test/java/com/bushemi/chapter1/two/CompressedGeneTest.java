@@ -1,4 +1,4 @@
-package com.bushemi.two;
+package com.bushemi.chapter1.two;
 
 import org.testng.annotations.Test;
 
