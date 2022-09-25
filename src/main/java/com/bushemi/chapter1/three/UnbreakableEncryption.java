@@ -1,4 +1,4 @@
-package com.bushemi.three;
+package com.bushemi.chapter1.three;
 
 import java.util.Random;
 

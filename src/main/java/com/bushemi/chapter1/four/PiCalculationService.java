@@ -1,4 +1,4 @@
-package com.bushemi.four;
+package com.bushemi.chapter1.four;
 
 public class PiCalculationService {
     //the more precision, the better number will be calculated.

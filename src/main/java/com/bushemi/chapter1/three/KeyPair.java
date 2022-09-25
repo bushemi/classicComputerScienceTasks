@@ -1,4 +1,4 @@
-package com.bushemi.three;
+package com.bushemi.chapter1.three;
 
 public final class KeyPair {
     public final byte[] key1;

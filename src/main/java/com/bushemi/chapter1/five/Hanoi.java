@@ -1,4 +1,4 @@
-package com.bushemi.five;
+package com.bushemi.chapter1.five;
 
 import java.util.Deque;
 import java.util.LinkedList;

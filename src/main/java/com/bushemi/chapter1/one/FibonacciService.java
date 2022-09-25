@@ -1,4 +1,4 @@
-package com.bushemi.one;
+package com.bushemi.chapter1.one;
 
 import java.util.HashMap;
 import java.util.Map;
