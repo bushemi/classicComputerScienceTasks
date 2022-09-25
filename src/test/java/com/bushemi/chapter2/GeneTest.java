@@ -1,5 +1,7 @@
-package com.bushemi.chapter2.one;
+package com.bushemi.chapter2;
 
+import com.bushemi.chapter2.one.Codon;
+import com.bushemi.chapter2.one.Gene;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
